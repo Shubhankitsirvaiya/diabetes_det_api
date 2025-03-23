@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Echo') {
             steps {
-                echo "Jenkins setup works"
+                echo "Jenkins setup works Test"
             }
         }
     }
