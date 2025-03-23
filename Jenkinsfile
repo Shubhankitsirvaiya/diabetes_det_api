@@ -5,11 +5,6 @@ pipeline {
         IMAGE_NAME = "sirvaiys/fastapi-diabetes"
     }
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Shubhankitsirvaiya/diabetes_det_api.git'
-            }
-        }
         stage('Build Image') {
             steps {
                 script {
