@@ -3,6 +3,7 @@ from pydantic import BaseModel
 import numpy as np
 import pickle
 
+print("here is the main code")
 # -----------------------------
 # 1. Load Trained Model & Scaler
 # -----------------------------
