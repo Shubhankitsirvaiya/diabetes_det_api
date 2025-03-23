@@ -1,9 +1,15 @@
 pipeline {
     agent any
+
+    options {
+        skipDefaultCheckout()
+    }
+
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-hub-creds')
         IMAGE_NAME = "sirvaiys/fastapi-diabetes"
     }
+
     stages {
         stage('Build Image') {
             steps {
@@ -14,6 +20,7 @@ pipeline {
                 }
             }
         }
+
         stage('Push to Docker Hub') {
             steps {
                 script {
